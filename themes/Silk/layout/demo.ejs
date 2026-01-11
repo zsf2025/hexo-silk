@@ -1,23 +1,24 @@
 <!--
- * @Description: 
  * @Author: zhangfu 18072150332@163.com
- * @Date: 2025-07-14 23:10:05
+ * @Date: 2025-07-03 22:34:32
  * @LastEditors: zhangfu 18072150332@163.com
- * @LastEditTime: 2026-01-11 12:01:14
+ * @LastEditTime: 2026-01-11 10:36:00
 -->
-<!-- 案例列表 -->
-<section id="cases" class="py-16 bg-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center mb-12">
-      <h2 class="text-3xl font-bold">精选案例</h2>
-      <a
-        href="<%- url_for('/demo') %>"
-        class="text-primary font-medium hover:underline flex items-center"
-      >
-        查看全部 <i class="fa fa-arrow-right ml-2"></i>
-      </a>
-    </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<%- partial('_partials/head', {
+    isPostPage: false,
+    hasMarkdown: false
+}) %>
+<body class="font-inter bg-gray-50 text-dark">
+    <!-- 导航栏 -->
+    <%- partial('_partials/header', { isPostPage: false }) %>
+
+    <!-- Demo展示区域 -->
+    <div class="container mx-auto px-4 py-8" style="margin-top: 100px;">
+        <h1 class="text-3xl font-bold mb-8 text-center">案例展示</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <% if (theme.demo && theme.demo.enable && theme.demo.items && theme.demo.items.length > 0) { %>
                 <% theme.demo.items.forEach(function(item) { %>
                     <a href="<%= item.url %>" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 m-2 block">
@@ -37,5 +38,6 @@
                 </a>
             <% } %>
         </div>
-  </div>
-</section>
+    </div>
+</body>
+</html>

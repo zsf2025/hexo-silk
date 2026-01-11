@@ -55,7 +55,23 @@ menus:
     url: '/'
   - name: 分类
     url: '#categories'
+  - name: Demo
+    url: '/demo'
   - name: 标签
     url: '#tags'
   - name: 关于
     url: '#about'
+
+# Demo
+demo:
+  enable: true
+  items:
+    - title: markdown文章转微信公众号文章工具
+      description: 简单易用的markdown文章转微信公众号文章工具，支持代码高亮，一键转换
+      url: /html/markdownToWX.html
+    - title: 专业级GIS映射工具
+      description: 上传背景，输入四个点经纬度，矫正后方可得到准确的地区经纬图，可以在上面新增精准的点位，一个工业场景工具 
+      url: /html/GIS.html
+    - title: cad平面标记点位工具
+      description: cad动态点位路径绘制工具
+      url: /html/cad.html
